@@ -50,6 +50,8 @@
       }
     };
 
+    //this function is created to check for empty box on checkbox button up.
+    //the function is not used for now.
     $scope.clearDiet = function () {
       var locItems = $scope.items.trim();
       //console.log(locItems);
