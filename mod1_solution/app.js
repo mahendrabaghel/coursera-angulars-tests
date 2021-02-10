@@ -13,7 +13,7 @@
     $scope.fColor="";
 
     $scope.checkDiet = function () {
-      
+
       var locItems = $scope.items.trim();
 
       //check if there are items.
@@ -25,19 +25,26 @@
 
       var itemArr = locItems.split(',');
       var citemArr = [];
-
+      var tItem="";
+      var j=0;
       //remove empty items from the textbox
       for (var i = 0; i < itemArr.length; i++) {
-        if (itemArr[i].trim().length > 1) {
-          citemArr[i] = itemArr[i];
+        tItem = itemArr[i].trim();
+        // console.log(Boolean(tItem));
+        // console.log("value of each item outside: "+tItem);
+        if (Boolean(tItem)) {
+          console.log("value of each item inside: "+tItem);
+          citemArr[j] = tItem;
+          j++;
         }
       }
-
+      // console.log("final array length: "+citemArr.length);
+      // console.log(citemArr);
       //finally count the legit items
       if (citemArr.length <= 3) {
         $scope.diet = "Enjoy!";
         $scope.fColor="green";
-      } else {
+      } else if(citemArr.length > 3){
         $scope.diet = "Too much!";
         $scope.fColor="green";
       }
