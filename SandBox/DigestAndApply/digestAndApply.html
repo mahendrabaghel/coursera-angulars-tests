@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html ng-app='DAApp'>
+  <head>
+    <meta charset="utf-8">
+    <script src="../FilterIntro/angular.min.js"></script>
+    <script src="digestAndApply.js"></script>
+    <style> body { font-size: 1.2em; }</style>
+    <title>Digest And Apply Cycle</title>
+  </head>
+  <body>
+    <h1>Digest And Apply Cycle</h1>
+    <div ng-controller='DAAppController'>
+      <div class="">
+        <button type="button" name="button" ng-click="upCounter();">
+        Up count once </button>
+      </div>
+
+      <div class="">
+        Value of counter: {{counter}}
+      </div>
+
+    </div>
+  </body>
+</html>
