@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html ng-app='DCApp'>
+  <head>
+    <meta charset="utf-8">
+    <script src="../FilterIntro/angular.min.js"></script>
+    <script src="digestcycle.js"></script>
+    <style> body { font-size: 1.2em; }</style>
+    <title>Digest Cycle</title>
+  </head>
+  <body>
+    <h1>Digest Cycle</h1>
+    <div ng-controller='DCAppController'>
+      <div class="">
+        <button type="button" name="button" ng-click="showNumberOfWatchers();">
+        Log # of Watchers </button>
+      </div>
+      <div class="">
+        <input type="text" ng-model='name'/>
+      </div>
+      <div class="">
+        <button type="button" name="button" ng-click="upOneCount();">
+        Up count once </button>
+      </div>
+
+      <div class="">
+        Value of counter: {{onceCounter}}
+      </div>
+
+    </div>
+  </body>
+</html>
