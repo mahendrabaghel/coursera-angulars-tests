@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html ng-app='BindingApp'>
+  <head>
+    <meta charset="utf-8">
+    <script src="../FilterIntro/angular.min.js"></script>
+    <script src="binding.js"></script>
+    <style> body { font-size: 1.2em; }</style>
+    <title>Bindings</title>
+  </head>
+  <body ng-controller='BindingController'>
+
+    <div class="">
+      <div class="">
+        <button type="button" name="button" ng-click='showNumberOfWatchers();'>Log watchers</button>
+      </div>
+      <div class="">
+        <button type="button" name="button" ng-click='setFullName();'>Set Full Name</button>
+      </div>
+      <div class="">
+        Full name (1 time bind) {{::fullName}}
+      </div>
+      <div class="">
+        <input type="text" name="two-way-binding" ng-model='firstName'>
+      </div>
+      <div class="">
+        <button type="button" name="button" ng-click='logFirstName();'>Log firstName</button>
+      </div>
+      <div class="">
+        <button type="button" name="button" ng-click='logFullName();'>Log fullName</button>
+      </div>
+
+    </div>
+
+  </body>
+</html>
