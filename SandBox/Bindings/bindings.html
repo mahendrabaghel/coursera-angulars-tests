@@ -20,6 +20,7 @@
         Full name (1 time bind) {{::fullName}}
       </div>
       <div class="">
+        Two way bind: 
         <input type="text" name="two-way-binding" ng-model='firstName'>
       </div>
       <div class="">
@@ -28,7 +29,9 @@
       <div class="">
         <button type="button" name="button" ng-click='logFullName();'>Log fullName</button>
       </div>
-
+      <div class="">
+        Full name (1 way bind) {{fullName}}
+      </div>
     </div>
 
   </body>
