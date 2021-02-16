@@ -11,15 +11,18 @@
   <body ng-controller='ShoppingListController'>
     <h1>ng-repeat</h1>
     <div class="">
+      Search By: <input type="text" name="" ng-model="keyword">
+    </div>
+    <div class="">
       List
       <ul>
-        <li ng-repeat='item in shoppingList1'>{{item}}</li>
+        <li ng-repeat='item in shoppingList1 | filter : keyword'>{{item}}</li>
       </ul>
     </div>
     <div class="">
       Object List
       <ul>
-        <li ng-repeat='item in shoppingList2'>Buy {{item.quantity}} of {{item.name}}</li>
+        <li ng-repeat='item in shoppingList2 | filter : keyword'>Buy {{item.quantity}} of {{item.name}}</li>
       </ul>
     </div>
     <div class="">
