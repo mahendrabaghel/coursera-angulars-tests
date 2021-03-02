@@ -37,6 +37,7 @@
 
         promise.then(function (response) {
           menu.found=response;
+          menu.lastRemoved="";
           if(menu.found.length>0){
             menu.title = origTitle + " (" + menu.found.length + " items )";
           }else{
