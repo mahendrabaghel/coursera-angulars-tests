@@ -31,7 +31,7 @@
       var menu = this;
       var searchTerm="";
       var origTitle = "Search returned";
-      menu.title = "Search the menu (all lower case)";
+      menu.title = "Search the menu (all lower case) e.g. chicken, noodle";
       menu.searchMenuItems = function (searchTerm) {
         var promise = MenuSearchService.getMatchedMenuItems(searchTerm);
 
