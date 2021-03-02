@@ -37,7 +37,11 @@
 
         promise.then(function (response) {
           menu.found=response;
-          menu.title = origTitle + " (" + menu.found.length + " items )";
+          if(menu.found.length>0){
+            menu.title = origTitle + " (" + menu.found.length + " items )";
+          }else{
+            menu.title = "Nothing found";
+          }
         })
         .catch(function (error) {
           console.log(error);
