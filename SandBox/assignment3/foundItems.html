@@ -1,4 +1,10 @@
-<li>
-  {{category.short_name}},{{category.name}},{{category.description}}
-  <button ng-click="menu.removeItem($index);">Remove Item</button>
+<h3>Title: {{ list.myTitle }}</h3>
+<ol>
+  <li ng-repeat="item in list.items">
+  <table>
+  <tr>
+    <td>{{item.short_name}},{{item.name}},{{item.description}}</td>
+    <td><button ng-click="list.onRemove({index: $index});">Remove Item</button></td>
+  </tr>
+  </table>
 </li>

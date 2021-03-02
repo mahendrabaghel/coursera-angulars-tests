@@ -18,11 +18,12 @@
     <div class="form-group narrow-button">
       <button class="btn btn-primary" ng-click="menu.searchMenuItems(menu.searchTerm);">Narrow It Down For Me!</button>
     </div>
-
-    <ol>
-      <found-items ng-repeat="category in menu.found"></found-items>
-    </ol>
-
+    <span>{{ menu.lastRemoved }}</span>
+    <div class="">
+        <found-items items="menu.found"
+        title="{{menu.title}}"
+        on-remove="menu.removeItem(index)"></found-items>
+    </div>
   </div>
 
 </body>
